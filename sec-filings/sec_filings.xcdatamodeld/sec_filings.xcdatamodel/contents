@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Company" representedClassName="Company" syncable="YES" codeGenerationType="category">
+        <attribute name="cik" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="entityType" optional="YES" attributeType="String"/>
+        <attribute name="exchange" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="sic" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sicDescription" optional="YES" attributeType="String"/>
+        <attribute name="ticker" optional="YES" attributeType="String"/>
+        <relationship name="filings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Filing" inverseName="parent" inverseEntity="Filing"/>
+    </entity>
+    <entity name="Filing" representedClassName="Filing" syncable="YES" codeGenerationType="category">
+        <attribute name="accessionNumber" optional="YES" attributeType="String"/>
+        <attribute name="fileContents" optional="YES" attributeType="String"/>
+        <attribute name="fileURL" optional="YES" attributeType="String"/>
+        <attribute name="filingDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="formType" optional="YES" attributeType="String"/>
+        <attribute name="transactionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Company" inverseName="filings" inverseEntity="Company"/>
+    </entity>
 </model>

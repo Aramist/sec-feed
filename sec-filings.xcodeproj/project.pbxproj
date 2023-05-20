@@ -14,8 +14,12 @@
 		8069A2B92A12A56300489A06 /* sec_filings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8069A2B72A12A56300489A06 /* sec_filings.xcdatamodeld */; };
 		8069A2BB2A12A56400489A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8069A2BA2A12A56400489A06 /* Assets.xcassets */; };
 		8069A2BE2A12A56400489A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8069A2BC2A12A56400489A06 /* LaunchScreen.storyboard */; };
+		80959F052A1833A800F7632B /* Company+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80959F012A1833A800F7632B /* Company+CoreDataClass.swift */; };
+		80959F072A1833A800F7632B /* Filing+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80959F032A1833A800F7632B /* Filing+CoreDataClass.swift */; };
+		80959F0A2A184B0800F7632B /* AddTickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80959F092A184B0800F7632B /* AddTickerViewController.swift */; };
 		80B81A382A16E66C00ACC777 /* SECRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B81A372A16E66C00ACC777 /* SECRequester.swift */; };
 		80B81A3A2A16E6DE00ACC777 /* company_tickers_exchange.json in Resources */ = {isa = PBXBuildFile; fileRef = 80B81A392A16E6DE00ACC777 /* company_tickers_exchange.json */; };
+		80B81A3E2A16FCAD00ACC777 /* MainFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B81A3D2A16FCAD00ACC777 /* MainFeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +32,13 @@
 		8069A2BA2A12A56400489A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8069A2BD2A12A56400489A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8069A2BF2A12A56400489A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80959F012A1833A800F7632B /* Company+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataClass.swift"; sourceTree = "<group>"; };
+		80959F032A1833A800F7632B /* Filing+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filing+CoreDataClass.swift"; sourceTree = "<group>"; };
+		80959F092A184B0800F7632B /* AddTickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTickerViewController.swift; sourceTree = "<group>"; };
 		80B81A372A16E66C00ACC777 /* SECRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SECRequester.swift; sourceTree = "<group>"; };
 		80B81A392A16E6DE00ACC777 /* company_tickers_exchange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = company_tickers_exchange.json; sourceTree = "<group>"; };
+		80B81A3B2A16FA1600ACC777 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		80B81A3D2A16FCAD00ACC777 /* MainFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +55,7 @@
 		8069A2A22A12A56300489A06 = {
 			isa = PBXGroup;
 			children = (
+				80B81A3B2A16FA1600ACC777 /* README.md */,
 				8069A2AD2A12A56300489A06 /* sec-filings */,
 				8069A2AC2A12A56300489A06 /* Products */,
 			);
@@ -62,6 +72,7 @@
 		8069A2AD2A12A56300489A06 /* sec-filings */ = {
 			isa = PBXGroup;
 			children = (
+				80B81A3C2A16FCA000ACC777 /* Views */,
 				80B81A362A16E61A00ACC777 /* Data */,
 				80B81A352A16E43100ACC777 /* VCs */,
 				8069A2AE2A12A56300489A06 /* AppDelegate.swift */,
@@ -70,7 +81,6 @@
 				8069A2BA2A12A56400489A06 /* Assets.xcassets */,
 				8069A2BC2A12A56400489A06 /* LaunchScreen.storyboard */,
 				8069A2BF2A12A56400489A06 /* Info.plist */,
-				8069A2B72A12A56300489A06 /* sec_filings.xcdatamodeld */,
 				80B81A392A16E6DE00ACC777 /* company_tickers_exchange.json */,
 			);
 			path = "sec-filings";
@@ -80,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				8069A2B22A12A56300489A06 /* MainFeedViewController.swift */,
+				80959F092A184B0800F7632B /* AddTickerViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -87,9 +98,20 @@
 		80B81A362A16E61A00ACC777 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				80959F012A1833A800F7632B /* Company+CoreDataClass.swift */,
+				80959F032A1833A800F7632B /* Filing+CoreDataClass.swift */,
 				80B81A372A16E66C00ACC777 /* SECRequester.swift */,
+				8069A2B72A12A56300489A06 /* sec_filings.xcdatamodeld */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		80B81A3C2A16FCA000ACC777 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				80B81A3D2A16FCAD00ACC777 /* MainFeedTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,11 +186,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80959F072A1833A800F7632B /* Filing+CoreDataClass.swift in Sources */,
 				8069A2B32A12A56300489A06 /* MainFeedViewController.swift in Sources */,
 				8069A2AF2A12A56300489A06 /* AppDelegate.swift in Sources */,
+				80B81A3E2A16FCAD00ACC777 /* MainFeedTableViewCell.swift in Sources */,
 				8069A2B92A12A56300489A06 /* sec_filings.xcdatamodeld in Sources */,
 				80B81A382A16E66C00ACC777 /* SECRequester.swift in Sources */,
+				80959F052A1833A800F7632B /* Company+CoreDataClass.swift in Sources */,
 				8069A2B12A12A56300489A06 /* SceneDelegate.swift in Sources */,
+				80959F0A2A184B0800F7632B /* AddTickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +420,8 @@
 				8069A2B82A12A56300489A06 /* sec_filings.xcdatamodel */,
 			);
 			currentVersion = 8069A2B82A12A56300489A06 /* sec_filings.xcdatamodel */;
-			path = sec_filings.xcdatamodeld;
+			name = sec_filings.xcdatamodeld;
+			path = ../sec_filings.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
